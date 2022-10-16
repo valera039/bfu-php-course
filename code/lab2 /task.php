@@ -225,7 +225,165 @@ function eighthTask()
 	}
 
 	echo $number . "\n";
+}
 
+// 17. Массивы
+function arrayFill(string $str, int $times): array
+{
+	$result = [];
+	for ($i = 0; $i < $times; $i++)
+	{
+		$result[$i] = $str;
+	}
+
+	return $result;
+}
+
+function ninthTask()
+{
+	$array = [];
+	for ($i = 0; $i < 7; $i++)
+	{
+		$array[] = str_repeat('x', $i + 1);
+	}
+	print_r($array);
+
+	print_r(arrayFill('someString', 4));
+
+	$result = 0;
+	$array = [[24], [2, 4, 2], [4, 78, 29], [8]];
+	foreach ($array as $item)
+	{
+		foreach ($item as $subItem)
+		{
+			$result += $subItem;
+		}
+	}
+	echo $result . "\n";
+
+	$array = [];
+	for ($i = 0; $i < 3; $i++)
+	{
+		for ($j = 1; $j < 4; $j++)
+		{
+			$array[$i][] = $i * 3 + $j;
+		}
+	}
+	print_r($array);
+
+	$array = [2, 5, 3, 9];
+	$result = $array[0] * $array[1] + $array[2] * $array[3];
+	echo $result . "\n";
+
+	$user = [
+		'name' => 'John',
+		'surname' => 'Doe',
+		'patronymic' => 'American'
+	];
+	echo $user['name'] . ' ' . $user['surname'] . ' ' . $user['patronymic'] . "\n";
+
+	$date = [
+		'year' => 2022,
+		'month' => 10,
+		'day' => 16,
+	];
+	echo $date['year'] .  '-' . $date['month'] . '-' . $date['day'] . "\n";
+
+	$array = ['a', 'b', 'c', 'd', 'e'];
+	echo count($array) . "\n";
+
+	// array совпадает
+	echo $array[count($array) - 1] . ' ' . $array[count($array) - 2] . "\n";
+}
+
+// 18. Конструкция if else
+
+function checkTwoDigitSum(int $a, int $b): bool
+{
+	return $a + $b > 10;
+}
+
+function checkNumberEqual(int $a, int $b): bool
+{
+	return $a === $b;
+}
+
+function tenthTask()
+{
+	echo checkTwoDigitSum(5, 15) . "\n";
+	echo checkNumberEqual(3, 3) . "\n";
+	$test = 56;
+	echo ($test === 0 ? 'верно':'');
+
+	$age = 53;
+	if ($age < 10 || $age > 99)
+	{
+		echo 'число меньше 10 или больше 99' . "\n";
+	}
+	else
+	{
+		$sum = 0;
+		while ($age > 0)
+		{
+			$sum += $age % 10;
+			$age /= 10;
+		}
+
+		if ($sum <= 9)
+		{
+			echo 'сумма цифр однозначна' . "\n";
+		}
+		else
+		{
+			echo 'сумма цифр двузначна' . "\n";
+		}
+	}
+
+	$array = [45, 23, 14];
+	if (count($array) === 3)
+	{
+		$sum = 0;
+
+		foreach ($array as $item)
+		{
+			$sum += $item;
+		}
+
+		echo $sum;
+	}
+}
+
+// 19. Циклы
+function eleventhTask()
+{
+	$length = 20;
+	for ($i = 0; $i < $length; $i++)
+	{
+		echo str_repeat('x', $i + 1) . "\n";
+	}
+}
+
+// 20. Комбинация функций
+function twelfthTask()
+{
+	$array = [4, 6, 18, 34];
+	echo (array_sum($array) / count($array)) . "\n";
+
+	echo array_sum(range(1, 100)) . "\n";
+
+	$array = [49, 4, 25];
+	print_r(array_map(static function($item) {
+		return sqrt($item);
+	}, $array));
+	echo "\n";
+
+	$keys = range('a', 'z');
+	$items = range(1, 26);
+	print_r(array_combine($keys, $items));
+
+	$str = "1234567890";
+	$array = str_split($str, 2);
+	echo array_sum($array) . "\n";
 }
 
 
@@ -236,4 +394,8 @@ function eighthTask()
 // fifthTask();
 // sixthTask();
 // seventhTask();
-eighthTask();
+// eighthTask();
+// ninthTask();
+// tenthTask();
+// eleventhTask();
+twelfthTask();
