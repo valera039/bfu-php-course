@@ -1,6 +1,6 @@
 <?php
 
-// 1. Доступ по ссылке
+// 1. Р”РѕСЃС‚СѓРї РїРѕ СЃСЃС‹Р»РєРµ
 function firstTask()
 {
 	$veryBadUnclearName = '15 chicken wings';
@@ -10,7 +10,7 @@ function firstTask()
 	echo "\nYour order is: $veryBadUnclearName." . "\n";
 }
 
-// 2. Числа
+// 2. Р§РёСЃР»Р°
 function secondTask()
 {
 	$firstArg = 42;
@@ -24,7 +24,7 @@ function secondTask()
 	echo "Difference: " . abs($lastMonth - $thisMonth). "\n";
 }
 
-// 3. Умножение и деление
+// 3. РЈРјРЅРѕР¶РµРЅРёРµ Рё РґРµР»РµРЅРёРµ
 function thirdTask()
 {
 	$learnedLanguages = ['Ruby', 'Python', 'JavaScript', 'C++'];
@@ -36,13 +36,13 @@ function thirdTask()
 	echo $daysPerLanguage . "\n";
 }
 
-// 12. Степень
+// 12. РЎС‚РµРїРµРЅСЊ
 function fourthTask()
 {
 	echo 'Eight square equal : '. 8 ** 2 . "\n";
 }
 
-// 13. Операторы присвоения
+// 13. РћРїРµСЂР°С‚РѕСЂС‹ РїСЂРёСЃРІРѕРµРЅРёСЏ
 function fifthTask()
 {
 	$myNum = 26;
@@ -56,25 +56,25 @@ function fifthTask()
 	echo 'Result: ' . $answer . "\n";
 }
 
-// 14. Математические функции
+// 14. РњР°С‚РµРјР°С‚РёС‡РµСЃРєРёРµ С„СѓРЅРєС†РёРё
 function sixthTask()
 {
-	// Работа с %
+	// Р Р°Р±РѕС‚Р° СЃ %
 	$a = 10;
 	$b = 3;
 	echo $a % $b . "\n";
 
-	// Работа со степенью и корнем
+	// Р Р°Р±РѕС‚Р° СЃРѕ СЃС‚РµРїРµРЅСЊСЋ Рё РєРѕСЂРЅРµРј
 	$a = 32;
 	$b = 7;
 	$module = $a % $b;
 	if ($module)
 	{
-		echo 'Делится с остатком: ' . $module ;
+		echo 'Р”РµР»РёС‚СЃСЏ СЃ РѕСЃС‚Р°С‚РєРѕРј: ' . $module ;
 	}
 	else
 	{
-		echo 'Делится' . "\n";
+		echo 'Р”РµР»РёС‚СЃСЏ' . "\n";
 	}
 
 	$st = pow(2, 10);
@@ -91,7 +91,7 @@ function sixthTask()
 
 	echo sqrt($result) . "\n";
 
-	// Работа с функциями округления
+	// Р Р°Р±РѕС‚Р° СЃ С„СѓРЅРєС†РёСЏРјРё РѕРєСЂСѓРіР»РµРЅРёСЏ
 
 	$result = sqrt(379);
 	echo round($result) . "\n";
@@ -104,14 +104,14 @@ function sixthTask()
 	$array['ceil'] = ceil($result);
 	print_r($array);
 
-	// Работа с min и max
+	// Р Р°Р±РѕС‚Р° СЃ min Рё max
 
 	$array = [4, -2, 5, 19, -130, 0, 10];
 
 	echo 'max number: ' . max($array) .  "\n";
 	echo 'min number: ' . min($array) .  "\n";
 
-	// Работа с рандомом
+	// Р Р°Р±РѕС‚Р° СЃ СЂР°РЅРґРѕРјРѕРј
 	echo random_int(1, 100) . "\n";
 
 	$result = [];
@@ -123,7 +123,7 @@ function sixthTask()
 	}
 	print_r($result);
 
-	// Работа с модулем
+	// Р Р°Р±РѕС‚Р° СЃ РјРѕРґСѓР»РµРј
 	$a = 387;
 	$b = 549;
 	echo abs($a - $b) . "\n";
@@ -136,7 +136,7 @@ function sixthTask()
 	}
 	print_r($result);
 
-	// Общее
+	// РћР±С‰РµРµ
 	$number = 27;
 	$array = [];
 	for ($i = 1; $i < ($number / 2) + 1; $i++)
@@ -165,7 +165,7 @@ function sixthTask()
 	echo $counter . "\n";
 }
 
-// 15. Функции
+// 15. Р¤СѓРЅРєС†РёРё
 
 function printStringReturnNumber(int $number): int
 {
@@ -181,7 +181,7 @@ function seventhTask()
 	echo $number . "\n";
 }
 
-// 16. Функции
+// 16. Р¤СѓРЅРєС†РёРё
 
 function increaseEnthusiasm(string $str): string
 {
@@ -227,7 +227,7 @@ function eighthTask()
 	echo $number . "\n";
 }
 
-// 17. Массивы
+// 17. РњР°СЃСЃРёРІС‹
 function arrayFill(string $str, int $times): array
 {
 	$result = [];
@@ -292,11 +292,11 @@ function ninthTask()
 	$array = ['a', 'b', 'c', 'd', 'e'];
 	echo count($array) . "\n";
 
-	// array совпадает
+	// array СЃРѕРІРїР°РґР°РµС‚
 	echo $array[count($array) - 1] . ' ' . $array[count($array) - 2] . "\n";
 }
 
-// 18. Конструкция if else
+// 18. РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ if else
 
 function checkTwoDigitSum(int $a, int $b): bool
 {
@@ -313,12 +313,12 @@ function tenthTask()
 	echo checkTwoDigitSum(5, 15) . "\n";
 	echo checkNumberEqual(3, 3) . "\n";
 	$test = 56;
-	echo ($test === 0 ? 'верно':'');
+	echo ($test === 0 ? 'РІРµСЂРЅРѕ':'');
 
 	$age = 53;
 	if ($age < 10 || $age > 99)
 	{
-		echo 'число меньше 10 или больше 99' . "\n";
+		echo 'С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ 10 РёР»Рё Р±РѕР»СЊС€Рµ 99' . "\n";
 	}
 	else
 	{
@@ -331,11 +331,11 @@ function tenthTask()
 
 		if ($sum <= 9)
 		{
-			echo 'сумма цифр однозначна' . "\n";
+			echo 'СЃСѓРјРјР° С†РёС„СЂ РѕРґРЅРѕР·РЅР°С‡РЅР°' . "\n";
 		}
 		else
 		{
-			echo 'сумма цифр двузначна' . "\n";
+			echo 'СЃСѓРјРјР° С†РёС„СЂ РґРІСѓР·РЅР°С‡РЅР°' . "\n";
 		}
 	}
 
@@ -353,7 +353,7 @@ function tenthTask()
 	}
 }
 
-// 19. Циклы
+// 19. Р¦РёРєР»С‹
 function eleventhTask()
 {
 	$length = 20;
@@ -363,7 +363,7 @@ function eleventhTask()
 	}
 }
 
-// 20. Комбинация функций
+// 20. РљРѕРјР±РёРЅР°С†РёСЏ С„СѓРЅРєС†РёР№
 function twelfthTask()
 {
 	$array = [4, 6, 18, 34];
