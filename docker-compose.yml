@@ -12,6 +12,7 @@ services:
     image: php:8-fpm
     volumes:
       - ./code:/code
+      - ./vendor:/vendor
     depends_on:
       - db
     links:
